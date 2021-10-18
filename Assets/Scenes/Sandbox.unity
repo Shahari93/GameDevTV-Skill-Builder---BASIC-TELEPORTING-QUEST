@@ -258,24 +258,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74cd91a7648f08249bcdb5736bcf8a86, type: 3}
---- !u!1 &30254082 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8344315865539525019, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-  m_PrefabInstance: {fileID: 220644671}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &30254084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30254082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a36c75797473247986e05b58367afc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportPad: {fileID: 1688517739}
 --- !u!1001 &33378850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -805,18 +787,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1688517738}
     m_Modifications:
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: player
+    - target: {fileID: 276317510, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: teleportPad
       value: 
-      objectReference: {fileID: 819822853}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: mainWorldLight
-      value: 
-      objectReference: {fileID: 1777563167}
+      objectReference: {fileID: 1688517739}
     - target: {fileID: 8344315865334038246, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -865,12 +839,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elements (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_Lightmapping
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
 --- !u!1001 &220644671
 PrefabInstance:
@@ -879,54 +848,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1688517738}
     m_Modifications:
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: player
+    - target: {fileID: 30254084, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: teleportPad
       value: 
-      objectReference: {fileID: 819822853}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: areaLight
+      objectReference: {fileID: 1688517739}
+    - target: {fileID: 276317510, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+      propertyPath: teleportPad
       value: 
-      objectReference: {fileID: 897587840}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: mainWorldLight
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: teleportTarget
-      value: 
-      objectReference: {fileID: 1402688415}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: teleportTargetsArray.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: teleportTargetsArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 1402688415}
-    - target: {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: teleportTargetsArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315864155744864, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_Name
-      value: TeleportB (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315864155744877, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315864155744877, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.038
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315864155744877, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -11.527
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1688517739}
     - target: {fileID: 8344315865334038246, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -977,38 +906,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8344315865539524999, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.129
+      value: 6.299
       objectReference: {fileID: 0}
     - target: {fileID: 8344315865539524999, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.097
+      value: -3.166
       objectReference: {fileID: 0}
     - target: {fileID: 8344315865539524999, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.49
+      value: 2.765
       objectReference: {fileID: 0}
-    - target: {fileID: 8344315865539525019, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_Name
-      value: TeleportA (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315865710370890, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_Lightmapping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315865710370891, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315865710370891, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 21.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344315865710370893, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-      propertyPath: m_Name
-      value: Area Light (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1846349108, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
 --- !u!4 &220644672 stripped
 Transform:
@@ -1334,24 +1242,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238044717}
   m_Mesh: {fileID: 4300000, guid: 439aa6d16e8b75647a47ca5a42c434d6, type: 3}
---- !u!1 &276317508 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8344315865539525019, guid: 810fe7ed559f2da4ca69c3e5b50b8d3e, type: 3}
-  m_PrefabInstance: {fileID: 163848800}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &276317510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276317508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a36c75797473247986e05b58367afc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportPad: {fileID: 1688517739}
 --- !u!1 &288280707
 GameObject:
   m_ObjectHideFlags: 0
