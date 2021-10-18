@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // GameDev.tv Challenge Club. Got questions or want to share your nifty solution?
@@ -7,49 +5,43 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [SerializeField] Transform teleportTarget;
-    [SerializeField] GameObject player;
-    [SerializeField] Light areaLight;
-    [SerializeField] Light mainWorldLight;
-
-    void Start() 
+    [SerializeField] private Transform[] teleportTarget;
+    public Transform[] TeleportTarget
     {
-        // CHALLENGE TIP: Make sure all relevant lights are turned off until you need them on
-        // because, you know, that would look cool.
+        get
+        {
+            return teleportTarget;
+        }
     }
+    [SerializeField] Light[] areaLight;
+    [SerializeField] GameObject player;
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other)
     {
-        // Challenge 2: TeleportPlayer();
+        // Challenge 2:
         // Challenge 3: DeactivateObject();
         // Challenge 4: IlluminateArea();
         // Challenge 5: StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
     }
 
-    void TeleportPlayer()
-    {
-        // code goes here
-    }
-
     void DeactivateObject()
     {
-       // code goes here 
+        // code goes here 
     }
 
     void IlluminateArea()
     {
-       // code goes here 
+        // code goes here 
     }
 
     // IEnumerator BlinkWorldLight()
     // {
-            // code goes here
+    // code goes here
     // }
 
     void TeleportPlayerRandom()
     {
         // code goes here... or you could modify one of your other methods to do the job.
     }
-
 }

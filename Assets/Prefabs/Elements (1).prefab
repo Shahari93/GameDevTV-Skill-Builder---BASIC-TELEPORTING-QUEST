@@ -52,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -140,7 +141,7 @@ GameObject:
   - component: {fileID: 8344315865539524998}
   - component: {fileID: 8344315865539525017}
   - component: {fileID: 8344315865539525016}
-  - component: {fileID: 1846349108}
+  - component: {fileID: 276317510}
   m_Layer: 0
   m_Name: TeleportA (1)
   m_TagString: Untagged
@@ -181,6 +182,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -224,7 +226,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.552844, y: 2.903397, z: 0.5622815}
   m_Center: {x: -0.011340976, y: 0.951699, z: -0.020192167}
---- !u!114 &1846349108
+--- !u!114 &276317510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,15 +235,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8344315865539525019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91523d33a2ee6414f9671d20c604e7e2, type: 3}
+  m_Script: {fileID: 11500000, guid: d6a36c75797473247986e05b58367afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportTarget: {fileID: 8344315864155744877}
-  player: {fileID: 0}
-  areaLight: {fileID: 8344315865710370890}
-  mainWorldLight: {fileID: 0}
-  teleportTargetsArray:
-  - {fileID: 8344315864155744877}
+  teleportPad: {fileID: 0}
 --- !u!1 &8344315865710370893
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +321,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -332,5 +329,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
