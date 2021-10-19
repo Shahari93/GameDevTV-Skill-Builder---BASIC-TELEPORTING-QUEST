@@ -4,28 +4,41 @@ using UnityEngine;
 public class TeleportPlayer : MonoBehaviour
 {
     [SerializeField] Teleport teleportPad;
-    [SerializeField] float waitFloat = 0.2f;
-    private WaitForSecondsRealtime waitTime;
+    private BoxCollider teleportCollider;
+
+    private WaitForSecondsRealtime WaitTimeToTeleprt;
+    [SerializeField] float waitTimeToTeleprt = 0.2f;
+
+    private WaitForSecondsRealtime WaitTimeToTurnOffCollider;
+    [SerializeField] float waitTimeToTurnOffCollider = 5f;
 
     private void Awake()
     {
-        waitTime = new WaitForSecondsRealtime(waitFloat);
+        WaitTimeToTeleprt = new WaitForSecondsRealtime(waitTimeToTeleprt);
+        WaitTimeToTurnOffCollider = new WaitForSecondsRealtime(waitTimeToTurnOffCollider);
+        teleportCollider = GetComponent<BoxCollider>();
     }
 
     void OnTriggerEnter(Collider other)
     {
         // Challenge 2:
-        StartCoroutine(TeleportPlayerToRand(other));
+        if (other.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(TeleportPlayerToRand(other));
+        }
     }
 
     IEnumerator TeleportPlayerToRand(Collider other)
     {
         GameObject player = other.gameObject;
-        if (player.CompareTag("Player"))
-        {
-            int randIndex = Random.Range(0, teleportPad.TeleportTarget.Length);
-            yield return waitTime;
-            player.transform.position = teleportPad.TeleportTarget[randIndex].position;
-        }
+        int randIndex = Random.Range(0, teleportPad.TeleportTarget.Length);
+        yield return WaitTimeToTeleprt;
+        player.transform.position = teleportPad.TeleportTarget[randIndex].position;
+        teleportPad.AreaLight[randIndex].enabled = true;
+
+        teleportCollider.enabled = false;
+        yield return WaitTimeToTurnOffCollider;
+        teleportCollider.enabled = true;
+        teleportPad.AreaLight[randIndex].enabled = false;
     }
 }
