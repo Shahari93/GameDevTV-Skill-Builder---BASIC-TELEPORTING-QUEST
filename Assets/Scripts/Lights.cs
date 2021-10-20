@@ -13,17 +13,20 @@ public class Lights : MonoBehaviour
         WaitBlinkWorldTime = new WaitForSecondsRealtime(blinkWorldTime);
     }
 
-    private void Update()
+    private void Start()
     {
         StartCoroutine(BlinkWorldLights());
     }
 
     IEnumerator BlinkWorldLights()
     {
-        yield return WaitBlinkWorldTime;
-        foreach (var light in mainWorldLight)
+        while (true)
         {
-            light.enabled = !light.enabled;
+            yield return WaitBlinkWorldTime;
+            foreach (var light in mainWorldLight)
+            {
+                light.enabled = !light.enabled;
+            }
         }
     }
 }
